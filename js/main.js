@@ -1,6 +1,6 @@
 OAuth.initialize('2AFykuFEF-15WYcn6d9UHU_d9Fo');
 var AUTH_PROMISE = OAuth.callback('twitter');
-if (AUTH_PROMISE === undefined) window.location.href = '/login.html';
+if (AUTH_PROMISE === undefined) window.location.href = '/css-only-column-layout/login.html';
 
 
 var tweetsVM = new Vue({
