@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/jquery-rebox.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="">
+  </head>
+
+  <body>
+    <section class="main-wrapper">
+      <header class="header">
+        <h1 class="top--title"><a href="/">ニンジャ ウキヨエ</a></h1>
+        <h3 class="top--sub-title">閲覧行為しよう</h3>
+        <section class="belt--topimage">
+          <nav class="navigation">
+            <ul class="navigation--inner">
+              <li class="navlink"><a class="nav__anchor" href="/">一覧</a></li>
+              <li class="navlink"><a class="nav__anchor" href="#">QA</a></li>
+              <li class="navlink"><a class="nav__anchor" href="#">天狗</a></li>
+              <li class="navlink"><a class="nav__anchor" href="#">Author</a></li>
+            </ul>
+          </nav>
+
+        </section> <!-- belt-\-topimage -->
+      </header>
+      <section class="content--main">
+        <article id="content-zone">
+          <ul class="tweets--wrapper">
+            <li v-repeat="tweets" class="tweet-{{$index}} tweet__li">
+              <div class="tweet__header--img__wrapper">
+                <img v-attr="src:imageUrl, max-height:300px, max-width:size.w" alt="ウキヨエ">
+              </div>
+              <div class="tweet__content" v-attr="href:imageUrl">
+                <h3 class="tweet-title" >
+                  <a class="tweet-title__inner" v-text="tweetTitle" v-attr="href:profilepage" target="_blank"></a>
+                </h3>
+                <div class="tweet--widgets">
+                  <a class="icon-wrapper" v-attr="href:linkToTweet" target="_blank">
+                    <i class="fa fa-twitter tweet--widget"></i>
+                  </a>
+                  <a class="icon-wrapper tweet--picture__anchor" v-attr="href:imageUrl" target="_blank">
+                    <i class="fa fa-picture-o tweet--widget tweet--path-to-image"></i>
+                  </a>
+                </div>
+                <div class="tweet--text tweet--picture__anchor" v-attr="href:imageUrl">
+                  <a v-attr="href:linkToTweet" v-text="tweet"></a>
+                </div>
+                <div class="tweet-description"><a v-attr="href:linkToTweet" v-text="tweetDescription"></a></div>
+              </div>
+            </li>
+          </ul>
+        </article>
+      </section> <!-- content-\-main -->
+
+      <section class="content--qa--wrapper">
+        <article class="content--qa--author">
+          <h2>制作者</h2>
+          <div>
+            <p>
+              <a class="icon-wrapper" href="https://twitter.com/hatchinee" target="_blank">
+                <i class="fa fa-twitter tweet--widget"></i>はっちん@やさしみ (@hatchinee)
+              </a>
+            </p>
+            <p>◆問い合わせとかはツイッターの方で適当にリプライとかDMとかやってください◆</p>
+            <p>バグ修正や改善行為もする。</p>
+          </div>
+        </article>
+
+        <article class="content--qa--qa">
+          <h2>Q&A</h2>
+          <div class="content--qa--qa__innner">
+            <h4 class="qa-title">何をするサイトなんですか</h4>
+            <p>ツイッターにあるニンジャスレイヤーファン絵師の集うタグ、#ウキヨエに流れてくるウキヨエを漫然と閲覧するためのサイトです。</p>
+            <p>気に入ったウキヨエが流れてきたら、書いた人のページを訪れてお気に入り行為とかしよう。</p>
+
+            <h4 class="qa-title">バグがあったんだけど</h4>
+            <p>上にある作者のツイッターアカウントから適当になんか連絡すると次の日とか休日には直っていることがある。</p>
+
+            <h4 class="qa-title">こんな機能が欲しいんだけど</h4>
+            <p>上にある作者のツイッターアカウントから適当になんか連絡すると機能によっては次の日とか休日には改善がされます。</p>
+
+            <h4 class="qa-title">パクリBOTのツイートが混じってる</h4>
+            <p>不正行為アカウントは報告いただければ一覧から除外します。</p>
+
+            <h4 class="qa-title"></h4>
+            <h4 class="qa-title"></h4>
+          </div>
+        </article>
+      </section> <!-- content--qa--wrapper -->
+    </section> <!--  main-wrapper -->
+
+
+    <!-- SCRIPTS -->
+    <!-- <script src="/bower_components/vue/dist/vue.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/0.10.6/vue.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- <script src="/bower_components/oauth-js/dist/oauth.min.js"></script> -->
+    <!-- <script src="/bower_components/oauth-js/dist/oauth.js"></script> -->
+    <script src="/js/oauth.min.js"></script>
+    <script src="/js/jquery-rebox.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

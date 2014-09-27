@@ -1,0 +1,266 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /* font-family: "ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,"MS UI Gothic",Verdana,sans-serif; */
+    font-family: "游明朝","YuMincho","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝",serif;
+    font-size: 1.5rem;
+    background-color: #f6f8ee;
+    color: #252525;
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.main-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.content--main {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    background-color: #652D2D;
+    color: #EEEEEE;
+    padding: 8px 0 30px 0;
+    margin-bottom: 30px;
+}
+
+.belt--topimage {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    background-image: url("http://www.pakutaso.com/assets_c/2012/01/MOK_unitotoro500-thumb-750x500-1111.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: 100% auto;
+}
+
+.top--title {
+    text-indent: 15px;
+}
+
+.top--sub-title {
+    text-indent: 15px; /* same as top--title text-indent */
+    font-weight: lighter;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(21, 20, 20, 0.52)
+}
+
+.navigation--inner {
+    padding-left: 15px; /* same as top--title text-indent */
+}
+
+.navlink {
+    display: inline-block;
+    text-align: center;
+    width: 60px;
+    padding: 10px 13px;
+    margin: 0 5px;
+    border-radius: 2px;
+    background-color: #544848;
+}
+
+
+
+/* カラムの親玉 */
+.tweets--wrapper {
+    position: relative;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 5px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 4;
+    -moz-column-gap: 5px;
+    -moz-column-fill: auto;
+    column-count: 4;
+    column-gap: 5px;
+    column-fill: auto;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 980px) {
+    .tweets--wrapper {
+        -webkit-column-count: 3;
+        -webkit-column-fill: auto;
+        -moz-column-count: 3;
+        -moz-column-fill: balance; /* 何故かFFはbalanceにしないとダメ */
+        column-count: 3;
+        column-fill: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tweets--wrapper {
+        -webkit-column-count: auto;
+        -moz-column-count: auto;
+        column-count: auto;
+    }
+}
+
+
+
+.tweet__header--img__wrapper {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.tweet__li {
+    position: relative;
+    /* overflow: hidden; */
+    display: inline-block;
+    background: #FEFEFE;
+    border: 2px solid #FAFAFA;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+
+    list-style: none;
+    min-width: 320px;
+    width: 20%;
+    height: auto;
+    /* max-height: 500px; */
+    margin: 5px 0;
+    vertical-align: top;
+    border-radius: 5px;
+    background-color: #555555;
+}
+
+
+.tweet__header {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* height: 60px; */
+    border: solid 1px #CBBFBF;
+    color: #FEFEFE;
+}
+
+
+.tweet__header--img__wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.tweet__header--img__wrapper img {
+    margin: auto;
+    border-radius: 5px;
+}
+
+
+.tweet__content {
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    top: 3%;
+    left: 2%;
+    min-height: 190px;  /* 260px - 60px - 10px */
+    margin: auto;
+    background-color: #0F0D0D;
+    color: #FEFEFE;
+
+    opacity: 0;
+    -webkit-transition: opacity .2s ease;
+    -moz-transition: opacity .2s ease;
+    -o-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+}
+
+.tweet__li:hover .tweet__content {
+    opacity: 0.7;
+}
+
+.tweet-title {
+    background-color: rgba(84, 11, 11, 0.95);
+    text-align: center;
+    font-size: 1.7rem;
+    margin: auto;
+    width: auto;
+    padding: 5px 4px;
+}
+    .tweet-title__inner {
+        display: inline-block;
+        width: 100%;
+    }
+
+/* wrapper */
+.tweet--widgets {
+    display: block;
+    text-align: center;
+}
+
+.tweet--widget {
+    display: inline-block;
+    padding: 3px;
+    font-size: 2.8rem;
+}
+
+.tweet--text {
+    height: 100%;
+    width: 97%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.tweet--favolite {
+    color: yellow;
+}
+
+.tweet--retweet {
+    color: blue;
+}
+
+
+.tweet--path-to-image {
+    color: #FEFEFE;
+}
+
+.tweet-description {
+    position: absolute;
+    font-size: 80%;
+    bottom: 0px;
+    right: 0px;
+}
+
+
+.icon-wrapper {
+    display: inline-block;
+    margin: 5px;
+}
+
+
+
+/* Q&A page */
+.content--qa--wrapper {
+    display: none;
+}
