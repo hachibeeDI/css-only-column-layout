@@ -11,7 +11,7 @@ var tweetsVM = new Vue({
 });
 
 var queryJsonEachTweets = function queryJsonEachTweets(data) {
-  console.log(data);
+  // console.log(data);
   var media = data.entities.media[0];
   var usr = data.user;
   return {
@@ -34,7 +34,7 @@ window.addEventListener('load', function(e) {
     .done(function(result) {
       //use result.access_token in your API request
       //or use result.get|post|put|del|patch|me methods (see below)
-      console.log(result);
+      // console.log(result);
       result.get('/1.1/search/tweets.json?q=' + encodeURIComponent('#ウキヨエ') + ',exclude:retweets')
         .done(function(json) {
           tweetsVM.$data.tweets = json.statuses
